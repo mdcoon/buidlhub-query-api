@@ -8,7 +8,7 @@ const postSchema = yup.object({
   data: yup.mixed().required()
 })
 
-const BASE_URL = "https://buidlhub.com/api";
+const BASE_URL = "https://buidlhub.com";
 
 export default class Connector {
 
