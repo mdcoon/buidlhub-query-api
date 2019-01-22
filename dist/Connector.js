@@ -30,7 +30,7 @@ var postSchema = yup.object({
   data: yup.mixed().required()
 });
 
-var BASE_URL = "https://buidlhub.com/api";
+var BASE_URL = "https://buidlhub.com";
 
 var Connector = function () {
   function Connector() {
