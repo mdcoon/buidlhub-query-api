@@ -21,6 +21,9 @@ To use this library, you will first need an API key from https://buidlhub.com. S
    //create a complex filter to find transactions for the Idex contract. 
    //NOTE: it is assumed that the Idex contract ABI is registered with your
    //dApp on BUIDLHub.
+   
+   //here we want to filter out transactions that are either successful and depositToken calls OR transactions that 
+   //have a Deposit or Withdraw event with specific attributes.
    let filter = Filter.or([
       Filter.and([
         //only transactions where the function is 'depositToken' for a specific token address
