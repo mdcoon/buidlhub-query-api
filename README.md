@@ -103,6 +103,9 @@ the client. This will reuse the token and make subsequent query calls more effic
 Why is instance and init asynchronous? Because in both cases, if the JWT token is stale, it will be refreshed before 
 returning the client instance. This simplifies your code so that you don't have to keep checking whether the client is connected, etc.
 
+## API Key
+To get an API key, you must first signup to https://buidlhub.com and create a project. Each project should have at least one contract defined with its ABI. Once created, go to the 'Settings' sidebar menu item in BUIDLManager. It will present the API key at the top of the settings panel.
+
 ## Filter
 Filters help narrow down the transactions you want to retrieve. At least one filter is currently required in every search.
 
