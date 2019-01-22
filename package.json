@@ -1,6 +1,6 @@
 {
   "name": "buidlhub-query-api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Query library for BUIDLHub",
   "main": "dist/index.js",
   "scripts": {
@@ -34,12 +34,13 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "chai": "^3.5.0",
-    "eslint": "^5.1.0",
-    "mocha": "^3.2.0"
+    "eslint": "^5.1.0"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "growl": ">=1.10.0",
     "lodash": "^4.17.11",
+    "mocha": "^5.2.0",
     "yup": "^0.26.7"
   }
 }
