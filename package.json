@@ -1,0 +1,45 @@
+{
+  "name": "buidlhub-query-api",
+  "version": "0.1.0",
+  "description": "Query library for BUIDLHub",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "LOG_LEVEL=debug mocha --compilers js:babel-core/register --require babel-polyfill $(find ./src -name *.test.js)",
+    "prepare": "babel ./src --out-dir ./dist --ignore '**/*.test.js'",
+    "build": "npm run prepare"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buidlhub/buidlhub-query-api.git"
+  },
+  "author": "TekHedz, LLC",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.21.0",
+    "babel-jest": "^23.0.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-dev-expression": "^0.2.1",
+    "babel-plugin-inline-react-svg": "^0.5.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-transform-es2015-classes": "^6.18.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-react-optimize": "^1.0.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^3.5.0",
+    "eslint": "^5.1.0",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "yup": "^0.26.7"
+  }
+}
