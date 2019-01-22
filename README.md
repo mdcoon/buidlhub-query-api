@@ -87,6 +87,22 @@ Currently, accounts are limited to 3 queries per second. Once that rate is excee
 
 # API
 
+## Client
+The BUIDLHub client connector is the entry point for any query activity. It must first be initialized with an API key from BUIDLHub. Once initialized, it is safe to use the client instance for multiple asynchronous calls. The client uses JWT tokens
+so a best practice is to initialize the client and then use the BHubClient.instance() function to retrieve a singleton of
+the client. This will reuse the token and make subsequent query calls more efficient. Tokens are good for 24 hours so a long-running process will see a performance blip when a token requires refresh.
+
+```javascript
+  const client = await BHubClient.init({ apiKey: APIKEY });
+  ...
+  //in some other code...
+  let client = await BHubClient.instance();
+  let r = await client.query({...}).execute();
+```
+
+Why is instance and init asynchronous? Because in both cases, if the JWT token is stale, it will be refreshed before 
+returning the client instance. This simplifies your code so that you don't have to keep checking whether the client is connected, etc.
+
 ## Filter
 Filters help narrow down the transactions you want to retrieve. At least one filter is currently required in every search.
 
